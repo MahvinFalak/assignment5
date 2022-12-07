@@ -12,7 +12,7 @@
         input {
             width: 100%;
             padding: 12px;
-            border: 1px solid #ccc;
+            border: 1px solid black;
             border-radius: 4px;
             box-sizing: border-box;
             margin-top: 6px;
@@ -27,12 +27,15 @@
         input[type=submit]:hover{
             background-color: lightgreen;
         }
+         body{
+            background-color: darkcyan;
+        }
     </style>
 </head>
 
 <body>
 
-    <h3 class="bg-dark text-white text-center py-3">Registration</h3>
+    <h3 class=" text-center py-3">Registration</h3>
     <div class="container">
         <form action="/postregis" method="post" enctype="multipart/form-data">
             {{#if error}}

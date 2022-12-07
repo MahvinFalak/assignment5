@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-{{>header}}
 <head>
    <!-- Required meta tags -->
    <meta charset="utf-8">
@@ -14,13 +13,32 @@
 </head>
 
 <body>
-   <h1>Home page</h1>
-   {{#if uname}}
-   <h1>wlcome :{{uname}} </h1>
-   <a href="/logout">Logout HERE</a>
-   {{else}}
-   <a href="/login">Login HERE</a>
-   {{/if}}
+   {{> header}}
+  <!-- Background image -->
+  <div class="p-5 text-center bg-image" style="
+      background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 550px;
+    ">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="d-flex justify-content-center align-items-center py-5">
+        <div class="text-white">
+           {{#if uname}}
+          <h1 class="mb-3">Welcome {{uname}}</h1>
+          <h4 class="mb-3">Assignment 3 Register and Login</h4>
+          <a class="btn btn-outline-light btn-lg" href="https://github.com/MahvinFalak/assignment4.git" role="button">Git link</a>
+          <a href="/logout" class="btn btn-outline-light btn-lg">Logout HERE</a>
+            {{else}}
+          <a href="/login">Login HERE</a>
+            {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Background image -->
+{{> footer}}
+
  
 
    <!-- Optional JavaScript; choose one of the two! -->
